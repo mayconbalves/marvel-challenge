@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render correct title element 1`] = `
+<div
+  class="sc-bdfBwQ cyLxbU"
+>
+  <div
+    class="sc-gsTCUz BqtCC"
+  >
+    <div
+      class="sc-dlfnbm jcONqp"
+    >
+      <img
+        alt="logo"
+        src="logo.png"
+      />
+    </div>
+    <div
+      class="sc-dlfnbm jcONqp"
+    >
+      <h1
+        class="sc-hKgILt eDWiGG"
+      >
+        Explore o universo
+      </h1>
+      <p
+        class="sc-eCssSg kkdxvu"
+      >
+        Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - e aquelas que você descobrirá em breve!
+      </p>
+    </div>
+    <div
+      class="sc-dlfnbm jcONqp"
+    >
+      <input
+        class="sc-jSgupP hhvvfQ"
+        placeholder="Procure por heróis"
+      />
+    </div>
+  </div>
+  <div
+    class="sc-dlfnbm jcONqp"
+  >
+    <div
+      class="sc-gKsewC hUrJUW"
+    >
+      <div>
+        <p>
+          Encontramos 0 heróis
+        </p>
+      </div>
+      <div
+        class="sc-iBPRYJ jOQDWD"
+      >
+        <img
+          alt="super herói"
+          src="superhero.png"
+        />
+        <p>
+          Ordernar por nome A/Z
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-fubCfw dLgYwQ"
+  />
+</div>
+`;
