@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 import SearchIcon from 'assets/search-icon.png'
 
-export const Container = styled.div`
-  display: grid;
-  width: 90%;
-  margin: 0 auto;
-`
-
 export const LogoContainer = styled.div`
   text-align: center;
   width: 100%;
@@ -67,7 +61,7 @@ export const Content = styled.div`
 export const Card = styled.div`
   cursor: pointer;
   display: grid;
-  height: 200px;
+  height: 240px;
   width: 100%;
   text-align: center;
   transition: transform 0.7s;
@@ -81,4 +75,14 @@ export const CardImg = styled.img`
   height: 200px;
   width: 100%;
   border-bottom: 7px solid red;
+`
+
+export const CardInfo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: 20px;
+  }
 `

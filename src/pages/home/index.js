@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { fetchCharacters } from './actions'
 import logo from 'assets/logo.png'
 import heroImg from 'assets/superhero.png'
+import emptyHeart from 'assets/empty_heart.png'
+import Container from 'components/container'
 import {
-  Container,
   LogoContainer,
   StyledDiv,
   StyledTitle,
@@ -14,7 +16,8 @@ import {
   OrderHero,
   Content,
   Card,
-  CardImg
+  CardImg,
+  CardInfo
 } from './styled'
 
 const Home = () => {
@@ -60,11 +63,17 @@ const Home = () => {
         {
           allCharacters.map(character => {
             return (
-              <Card key={character.id}>
-                <CardImg
-                  src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                  alt={character.name}
-                />
+              <Card  key={character.id}>
+                <Link to={`/characters/${character.id}`}>
+                  <CardImg
+                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                    alt={character.name}
+                  />
+                </Link>
+                <CardInfo>
+                  <p>{character.name}</p>
+                  <img src={emptyHeart} alt='favorito' />
+                </CardInfo>
               </Card>
             )
           })
