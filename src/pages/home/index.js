@@ -6,18 +6,19 @@ import logo from 'assets/logo.png'
 import heroImg from 'assets/superhero.png'
 import emptyHeart from 'assets/empty_heart.png'
 import Container from 'components/container'
+import InputStyled from 'components/input'
 import {
   LogoContainer,
   StyledDiv,
   StyledTitle,
   StyledSubTitle,
-  InputStyled,
   HeroDiv,
   OrderHero,
   Content,
   Card,
   CardImg,
-  CardInfo
+  CardInfo,
+  Grid
 } from './styled'
 
 const Home = () => {
@@ -29,56 +30,56 @@ const Home = () => {
   }, [dispatch])
 
   return (
-    <Container>
-      <LogoContainer>
+    <Container color='#fff'>
+      <Grid>
+        <LogoContainer>
+          <StyledDiv>
+            <img src={logo} alt='logo' />
+          </StyledDiv>
+          <StyledDiv>
+            <StyledTitle>Explore o universo</StyledTitle>
+            <StyledSubTitle>
+              Mergulhe no domínio deslumbrante de todos os
+              personagens clássicos que você ama - e aquelas
+              que você descobrirá em breve!
+            </StyledSubTitle>
+          </StyledDiv>
+          <StyledDiv>
+            <InputStyled placeholder='Procure por heróis' />
+          </StyledDiv>
+        </LogoContainer>
         <StyledDiv>
-          <img src={logo} alt='logo' />
+          <HeroDiv>
+            <div>
+              <p>{`Encontramos ${allCharacters.length} heróis`}</p>
+            </div>
+            <OrderHero>
+              <img src={heroImg} alt='super herói' />
+              <p>Ordernar por nome A/Z</p>
+            </OrderHero>
+          </HeroDiv>
         </StyledDiv>
-        <StyledDiv>
-          <StyledTitle>Explore o universo</StyledTitle>
-          <StyledSubTitle>
-            Mergulhe no domínio deslumbrante de todos os
-            personagens clássicos que você ama - e aquelas
-            que você descobrirá em breve!
-          </StyledSubTitle>
-        </StyledDiv>
-        <StyledDiv>
-          <InputStyled
-            placeholder='Procure por heróis'
-          />
-        </StyledDiv>
-      </LogoContainer>
-      <StyledDiv>
-        <HeroDiv>
-          <div>
-            <p>{`Encontramos ${allCharacters.length} heróis`}</p>
-          </div>
-          <OrderHero>
-            <img src={heroImg} alt='super herói' />
-            <p>Ordernar por nome A/Z</p>
-          </OrderHero>
-        </HeroDiv>
-      </StyledDiv>
-      <Content>
-        {
-          allCharacters.map(character => {
-            return (
-              <Card  key={character.id}>
-                <Link to={`/characters/${character.id}`}>
-                  <CardImg
-                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                    alt={character.name}
-                  />
-                </Link>
-                <CardInfo>
-                  <p>{character.name}</p>
-                  <img src={emptyHeart} alt='favorito' />
-                </CardInfo>
-              </Card>
-            )
-          })
-        }
-      </Content>
+        <Content>
+          {
+            allCharacters.map(character => {
+              return (
+                <Card  key={character.id}>
+                  <Link to={`/characters/${character.id}`}>
+                    <CardImg
+                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                      alt={character.name}
+                    />
+                  </Link>
+                  <CardInfo>
+                    <p>{character.name}</p>
+                    <img src={emptyHeart} alt='favorito' />
+                  </CardInfo>
+                </Card>
+              )
+            })
+          }
+        </Content>
+      </Grid>
     </Container>
   )
 }

@@ -1,5 +1,10 @@
 import styled from 'styled-components'
-import SearchIcon from 'assets/search-icon.png'
+
+export const Grid = styled.div`
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+`
 
 export const LogoContainer = styled.div`
   text-align: center;
@@ -17,25 +22,6 @@ export const StyledTitle = styled.h1`
 
 export const StyledSubTitle = styled.p`
   color: #b9b9b9;
-`
-
-export const InputStyled = styled.input`
-  background-color: #fdecec;
-  background-position: 10px;
-  background-image: url(${SearchIcon});
-  background-repeat: no-repeat;
-  background-size: 30px;
-  width: 50%;
-  margin: 30px 10px;
-  padding: 10px 45px;
-  font-size: 18px;
-  outline: none;
-  border: 1px solid #fdecec;
-  border-radius: 25px;
-
-  &::placeholder {
-    color: #ff1510;
-  }
 `
 
 export const HeroDiv = styled.div`
