@@ -11,5 +11,7 @@ hash.update(timestamp + PRIVATE_KEY + PUBLIC_KEY)
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   baseUrl: url,
-  CHARACTERS_LIST: `${url}/characters?ts=${timestamp}&orderBy=name&limit=20&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
+  CHARACTERS_LIST: `${url}/characters?ts=${timestamp}&orderBy=name&limit=20&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
+  CHARACTER_DETAILS: id =>
+    `${url}/characters/${id}?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
 }
