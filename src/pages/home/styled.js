@@ -53,7 +53,7 @@ export const Card = styled.div`
   transition: transform 0.7s;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `
 

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { fetchCharacters, getCharacter } from './actions'
+import { addFavoriteCharacters } from 'actions/favorite'
 import logo from 'assets/logo.png'
 import heroImg from 'assets/superhero.png'
 import emptyHeart from 'assets/empty_heart.png'
+import heart from 'assets/heart.png'
 import Container from 'components/container'
 import InputStyled from 'components/input'
 import {
@@ -24,16 +26,31 @@ import {
 
 const Home = () => {
   const [values, setValues] = useState({ hero: '' })
+  const [likes, setLikes] = useState([])
   const dispatch = useDispatch()
   const allCharacters = useSelector(state => state.charactersReducer.characters) || []
 
+  const getFavorite = async () => {
+    const data = await fetch('http://localhost:8080/favorite/list')
+      data
+        .json()
+        .then(data => setLikes(data))
+        .catch(e => e)
+  }
+
   useEffect(() => {
     dispatch(fetchCharacters())
+    getFavorite()
   }, [dispatch])
 
   const inputChange = e => {
     const { value, name } = e.target
     setValues({ ...values, [name]: value })
+  }
+
+  const handleFavorite = (id, like) => {
+    dispatch(addFavoriteCharacters(id, like))
+    getFavorite()
   }
 
   const handleKeyDown = async (e) => {
@@ -46,6 +63,7 @@ const Home = () => {
     }
   }
 
+  const hasId = likes.map(item => item.id)
   return (
     <Container color='#fff'>
       <Grid>
@@ -96,7 +114,19 @@ const Home = () => {
                   </Link>
                   <CardInfo>
                     <p>{character.name}</p>
-                    <img src={emptyHeart} alt='favorito' />
+                    {
+                      !hasId.includes(character.id)
+                      ? <img
+                          src={emptyHeart}
+                          alt='favorito'
+                          onClick={() => handleFavorite(character.id, true)}
+                        />
+                      : <img
+                          src={heart}
+                          alt='favorito'
+                          onClick={() => handleFavorite(character.id, true)}
+                        />
+                    }
                   </CardInfo>
                 </Card>
               )
@@ -111,7 +141,19 @@ const Home = () => {
                   </Link>
                   <CardInfo>
                     <p>{character.name}</p>
-                    <img src={emptyHeart} alt='favorito' />
+                    {
+                      !hasId.includes(character.id)
+                      ? <img
+                          src={emptyHeart}
+                          alt='favorito'
+                          onClick={() => handleFavorite(character.id, true)}
+                        />
+                      : <img
+                          src={heart}
+                          alt='favorito'
+                          onClick={() => handleFavorite(character.id, true)}
+                        />
+                    }
                   </CardInfo>
                 </OnlyCard>
               )
