@@ -2,68 +2,76 @@
 
 exports[`<Home /> should render correct title element 1`] = `
 <div
-  class="sc-bdfBwQ cyLxbU"
+  class="sc-bdfBwQ kSwYoH"
+  color="#fff"
 >
   <div
-    class="sc-gsTCUz BqtCC"
+    class="sc-dlfnbm kuxBMX"
   >
     <div
-      class="sc-dlfnbm jcONqp"
+      class="sc-hKgILt grZqev"
     >
-      <img
-        alt="logo"
-        src="logo.png"
-      />
-    </div>
-    <div
-      class="sc-dlfnbm jcONqp"
-    >
-      <h1
-        class="sc-hKgILt eDWiGG"
+      <div
+        class="sc-eCssSg jgsGZg"
       >
-        Explore o universo
-      </h1>
-      <p
-        class="sc-eCssSg kkdxvu"
+        <img
+          alt="logo"
+          src="logo.png"
+        />
+      </div>
+      <div
+        class="sc-eCssSg jgsGZg"
       >
-        Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - e aquelas que você descobrirá em breve!
-      </p>
-    </div>
-    <div
-      class="sc-dlfnbm jcONqp"
-    >
-      <input
-        class="sc-jSgupP hhvvfQ"
-        placeholder="Procure por heróis"
-      />
-    </div>
-  </div>
-  <div
-    class="sc-dlfnbm jcONqp"
-  >
-    <div
-      class="sc-gKsewC hUrJUW"
-    >
-      <div>
-        <p>
-          Encontramos 0 heróis
+        <h1
+          class="sc-jSgupP cnfwtI"
+        >
+          Explore o universo
+        </h1>
+        <p
+          class="sc-gKsewC hBazWe"
+        >
+          Mergulhe no domínio deslumbrante de todos os personagens clássicos que você ama - e aquelas que você descobrirá em breve!
         </p>
       </div>
       <div
-        class="sc-iBPRYJ jOQDWD"
+        class="sc-eCssSg jgsGZg"
       >
-        <img
-          alt="super herói"
-          src="superhero.png"
+        <input
+          class="sc-gsTCUz cntDrA"
+          name="hero"
+          placeholder="Procure por heróis"
+          type="text"
+          value=""
         />
-        <p>
-          Ordernar por nome A/Z
-        </p>
       </div>
     </div>
+    <div
+      class="sc-eCssSg jgsGZg"
+    >
+      <div
+        class="sc-iBPRYJ inxKGS"
+      >
+        <div>
+          <p>
+            Encontramos 0 heróis
+          </p>
+        </div>
+        <div
+          class="sc-fubCfw bUVNAC"
+        >
+          <img
+            alt="super herói"
+            src="superhero.png"
+          />
+          <p>
+            Ordernar por nome A/Z
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-pFZIQ joIIuf"
+    />
   </div>
-  <div
-    class="sc-fubCfw dLgYwQ"
-  />
 </div>
 `;
