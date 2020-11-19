@@ -40,7 +40,22 @@ export const CharacterImg = styled.div`
   width: 80%;
 
   img {
-    height: 200px;
-    margin: 0 auto;
+    height: 450px;
+    margin: 0 20%;
+    width: 450px;
+  }
+`
+
+export const AllComics = styled.div`
+  display: grid;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin: 25px 0;
+`
+
+export const ComicsContainer = styled.div`
+  img {
+    max-height: 200px;
   }
 `
