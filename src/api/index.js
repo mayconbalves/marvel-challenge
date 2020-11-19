@@ -3,6 +3,7 @@ import md5 from 'js-md5'
 const PRIVATE_KEY = '358a7f7e001f105f13dea1b03b938ff2e85f7d0d'
 const PUBLIC_KEY = 'ed7a7b83b6e8f9f675216ce8cd676cc3'
 const url = 'https://gateway.marvel.com/v1/public'
+const favoriteUrl = 'http://localhost:8080/favorite'
 
 const timestamp = Number(new Date())
 const hash = md5.create()
@@ -17,5 +18,8 @@ export default {
   CHARACTER_COMICS: id =>
     `${url}/characters/${id}/comics?ts=${timestamp}&orderBy=onsaleDate&limit=10&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
   GET_ONLY_CHARACTER: name =>
-    `${url}/characters?name=${name}&ts=${timestamp}&orderBy=modified&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
+    `${url}/characters?name=${name}&ts=${timestamp}&orderBy=modified&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
+  GET_ALL_FAVORITE: `${favoriteUrl}/list`,
+  ADD_FAVORITE: `${favoriteUrl}/create`,
+  UPDATE_FAVORITE: id => `${favoriteUrl}/${id}/update`,
 }
