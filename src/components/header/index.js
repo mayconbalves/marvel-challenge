@@ -1,16 +1,19 @@
 import React from 'react'
 import StyledInput from 'components/input'
 import logo from 'assets/logo.png'
-import { StyledHeader, ImgDiv, InputDiv } from './styled'
+import { Link } from 'react-router-dom'
+import { StyledHeader, ImgDiv, InputDiv, HeaderLogo } from './styled'
 
 const Header = () => {
   return (
     <StyledHeader>
       <ImgDiv>
-        <img src={logo} alt='logo' />
+        <Link to='/'>
+          <HeaderLogo src={logo} alt='logo' />
+        </Link>
       </ImgDiv>
       <InputDiv>
-        <StyledInput placeholder='Procure seu herói' />
+        <StyledInput placeholder='Procure seu herói' width='80%' />
       </InputDiv>
     </StyledHeader>
   )

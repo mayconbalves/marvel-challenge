@@ -7,7 +7,7 @@ export const InputStyled = styled.input`
   background-image: url(${SearchIcon});
   background-repeat: no-repeat;
   background-size: 30px;
-  width: 50%;
+  width: ${props => props.width ? props.width : '50%'};
   margin: 30px 10px;
   padding: 10px 45px;
   font-size: 18px;

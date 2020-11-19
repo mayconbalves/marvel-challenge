@@ -1,18 +1,38 @@
 import React from 'react'
-import { string } from 'prop-types'
+import { string, func } from 'prop-types'
 import { InputStyled } from './styled'
 
-const Input = ({ onChange, placeholder }) => {
+const Input = (
+  {
+    onKeyDown,
+    onChange,
+    placeholder,
+    value,
+    width,
+    type,
+    name
+  }) => {
   return (
     <InputStyled
+      onKeyDown={onKeyDown}
       onChange={onChange}
       placeholder={placeholder}
+      value={value}
+      width={width}
+      type={type}
+      name={name}
     />
   )
 }
 
 Input.propTypes = {
-  placeholder: string
+  onKeyDown: func,
+  onChange: func.isRequired,
+  placeholder: string,
+  value: string.isRequired,
+  width: string,
+  type: string,
+  name: string
 }
 
 export default Input

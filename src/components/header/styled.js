@@ -3,11 +3,12 @@ import styled from 'styled-components'
 export const StyledHeader = styled.div`
   display: flex;
   align-items: center;
+  max-hight: 90px;
+`
 
-  img {
-    height: 50px;
-    width: 150px;
-  }
+export const HeaderLogo = styled.img`
+  height: 50px;
+  width: 150px;
 `
 
 export const ImgDiv = styled.div`
