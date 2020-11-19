@@ -57,6 +57,20 @@ export const Card = styled.div`
   }
 `
 
+export const OnlyCard = styled.div`
+  cursor: pointer;
+  display: grid;
+  height: 240px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.7s;
+  margin: 0 auto;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+`
+
 export const CardImg = styled.img`
   height: 200px;
   width: 100%;
