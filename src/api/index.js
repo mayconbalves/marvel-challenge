@@ -11,7 +11,11 @@ hash.update(timestamp + PRIVATE_KEY + PUBLIC_KEY)
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   baseUrl: url,
-  CHARACTERS_LIST: `${url}/characters?ts=${timestamp}&orderBy=name&limit=20&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
+  CHARACTERS_LIST: `${url}/characters?ts=${timestamp}&orderBy=modified&limit=20&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
   CHARACTER_DETAILS: id =>
-    `${url}/characters/${id}?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
+    `${url}/characters/${id}?ts=${timestamp}&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
+  CHARACTER_COMICS: id =>
+    `${url}/characters/${id}/comics?ts=${timestamp}&orderBy=onsaleDate&limit=10&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`,
+  GET_ONLY_CHARACTER: name =>
+    `${url}/characters?name=${name}&ts=${timestamp}&orderBy=modified&apikey=${PUBLIC_KEY}&hash=${hash.hex()}`
 }
