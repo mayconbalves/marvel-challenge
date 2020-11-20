@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> should render correct title element 1`] = `
+<div
+  class="sc-bdfBwQ kSwYoH"
+  color="#fff"
+>
+  
+  &lt;div&gt;
+    &lt;h1&gt;children&lt;/h1&gt;
+  &lt;/div&gt;
+
+</div>
+`;

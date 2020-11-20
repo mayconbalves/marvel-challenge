@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> should render correct name element 1`] = `
+<input
+  class="sc-bdfBwQ hFmnHx"
+  name="hero"
+  placeholder="Procure seu heróis"
+  type="text"
+  value="hulk"
+  width="80%"
+/>
+`;

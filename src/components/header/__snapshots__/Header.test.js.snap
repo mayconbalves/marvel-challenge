@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render correct name of StyledInput 1`] = `
+<div
+  class="sc-gsTCUz FUAyX"
+>
+  <div
+    class="sc-hKgILt eaPfCO"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="logo"
+        class="sc-dlfnbm gWQjsB"
+        src="logo.png"
+      />
+    </a>
+  </div>
+  <div
+    class="sc-eCssSg fTTyBU"
+  >
+    <input
+      class="sc-bdfBwQ hFmnHx"
+      name="hero"
+      placeholder="Procure seu herói"
+      type="text"
+      value=""
+      width="80%"
+    />
+  </div>
+</div>
+`;
