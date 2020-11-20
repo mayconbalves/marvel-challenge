@@ -1,0 +1,361 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CharacterDetails /> should render link logo 1`] = `
+<div
+  class="sc-bdfBwQ jDLbtJ"
+  color="#e7f6e7"
+>
+  <div
+    class="sc-iBPRYJ gKULRa"
+  >
+    <div
+      class="sc-dlfnbm cMUrvE"
+    >
+      <div
+        class="sc-eCssSg cLHnhZ"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo"
+            class="sc-hKgILt eWTPgb"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="sc-jSgupP fgKrOJ"
+      >
+        <input
+          class="sc-gsTCUz jhNQGZ"
+          name="hero"
+          placeholder="Procure seu herói"
+          type="text"
+          value=""
+          width="80%"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-gKsewC bOueue"
+    >
+      <div
+        class="sc-fubCfw cFiCdb"
+      >
+        <div
+          class="sc-pFZIQ jnkQqj"
+        >
+          <h1 />
+          <img
+            alt="favoritar"
+            src="empty_heart.png"
+          />
+        </div>
+        <p
+          class="sc-jrAGrp dULkDb"
+        >
+          No description
+        </p>
+      </div>
+      <div
+        class="sc-kEjbxe izSWIv"
+      >
+        <img
+          src="undefined.undefined"
+        />
+      </div>
+    </div>
+    <div>
+      <h1>
+        Últimos lançamentos
+      </h1>
+      <div
+        class="sc-iqHYGH xvFmK"
+      >
+        <div
+          class="sc-crrsfI jDHbbv"
+        >
+          <h2>
+            Not found comics:
+          </h2>
+          <img
+            alt="marvel"
+            src="not-found.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CharacterDetails /> should render logo image 1`] = `
+<div
+  class="sc-bdfBwQ jDLbtJ"
+  color="#e7f6e7"
+>
+  <div
+    class="sc-iBPRYJ gKULRa"
+  >
+    <div
+      class="sc-dlfnbm cMUrvE"
+    >
+      <div
+        class="sc-eCssSg cLHnhZ"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo"
+            class="sc-hKgILt eWTPgb"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="sc-jSgupP fgKrOJ"
+      >
+        <input
+          class="sc-gsTCUz jhNQGZ"
+          name="hero"
+          placeholder="Procure seu herói"
+          type="text"
+          value=""
+          width="80%"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-gKsewC bOueue"
+    >
+      <div
+        class="sc-fubCfw cFiCdb"
+      >
+        <div
+          class="sc-pFZIQ jnkQqj"
+        >
+          <h1 />
+          <img
+            alt="favoritar"
+            src="empty_heart.png"
+          />
+        </div>
+        <p
+          class="sc-jrAGrp dULkDb"
+        >
+          No description
+        </p>
+      </div>
+      <div
+        class="sc-kEjbxe izSWIv"
+      >
+        <img
+          src="undefined.undefined"
+        />
+      </div>
+    </div>
+    <div>
+      <h1>
+        Últimos lançamentos
+      </h1>
+      <div
+        class="sc-iqHYGH xvFmK"
+      >
+        <div
+          class="sc-crrsfI jDHbbv"
+        >
+          <h2>
+            Not found comics:
+          </h2>
+          <img
+            alt="marvel"
+            src="not-found.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CharacterDetails /> should render title when have comics 1`] = `
+<div
+  class="sc-bdfBwQ jDLbtJ"
+  color="#e7f6e7"
+>
+  <div
+    class="sc-iBPRYJ gKULRa"
+  >
+    <div
+      class="sc-dlfnbm cMUrvE"
+    >
+      <div
+        class="sc-eCssSg cLHnhZ"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo"
+            class="sc-hKgILt eWTPgb"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="sc-jSgupP fgKrOJ"
+      >
+        <input
+          class="sc-gsTCUz jhNQGZ"
+          name="hero"
+          placeholder="Procure seu herói"
+          type="text"
+          value=""
+          width="80%"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-gKsewC bOueue"
+    >
+      <div
+        class="sc-fubCfw cFiCdb"
+      >
+        <div
+          class="sc-pFZIQ jnkQqj"
+        >
+          <h1 />
+          <img
+            alt="favoritar"
+            src="empty_heart.png"
+          />
+        </div>
+        <p
+          class="sc-jrAGrp dULkDb"
+        >
+          No description
+        </p>
+      </div>
+      <div
+        class="sc-kEjbxe izSWIv"
+      >
+        <img
+          src="undefined.undefined"
+        />
+      </div>
+    </div>
+    <div>
+      <h1>
+        Últimos lançamentos
+      </h1>
+      <div
+        class="sc-iqHYGH xvFmK"
+      >
+        <div
+          class="sc-crrsfI jDHbbv"
+        >
+          <h2>
+            Not found comics:
+          </h2>
+          <img
+            alt="marvel"
+            src="not-found.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<CharacterDetails /> should render title without comics 1`] = `
+<div
+  class="sc-bdfBwQ jDLbtJ"
+  color="#e7f6e7"
+>
+  <div
+    class="sc-iBPRYJ gKULRa"
+  >
+    <div
+      class="sc-dlfnbm cMUrvE"
+    >
+      <div
+        class="sc-eCssSg cLHnhZ"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="logo"
+            class="sc-hKgILt eWTPgb"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="sc-jSgupP fgKrOJ"
+      >
+        <input
+          class="sc-gsTCUz jhNQGZ"
+          name="hero"
+          placeholder="Procure seu herói"
+          type="text"
+          value=""
+          width="80%"
+        />
+      </div>
+    </div>
+    <div
+      class="sc-gKsewC bOueue"
+    >
+      <div
+        class="sc-fubCfw cFiCdb"
+      >
+        <div
+          class="sc-pFZIQ jnkQqj"
+        >
+          <h1 />
+          <img
+            alt="favoritar"
+            src="empty_heart.png"
+          />
+        </div>
+        <p
+          class="sc-jrAGrp dULkDb"
+        >
+          No description
+        </p>
+      </div>
+      <div
+        class="sc-kEjbxe izSWIv"
+      >
+        <img
+          src="undefined.undefined"
+        />
+      </div>
+    </div>
+    <div>
+      <h1>
+        Últimos lançamentos
+      </h1>
+      <div
+        class="sc-iqHYGH xvFmK"
+      >
+        <div
+          class="sc-crrsfI jDHbbv"
+        >
+          <h2>
+            Not found comics:
+          </h2>
+          <img
+            alt="marvel"
+            src="not-found.png"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
