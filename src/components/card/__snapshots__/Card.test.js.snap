@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render correct empty img 1`] = `
+<div
+  class="sc-bdfBwQ gGfdFX"
+>
+  <a
+    href="/characters/undefined"
+  >
+    <img
+      class="sc-gsTCUz iHzmRF"
+      src="http://i.annihil.us/u/prod/marvel/i/mg/6/30/4c7c64437b5a1.jpg"
+    />
+  </a>
+  <div
+    class="sc-dlfnbm inTuuj"
+  >
+    <p />
+    <img
+      alt="favoritar"
+      class="sc-hKgILt jagTBZ"
+      data-testid="favoritar"
+      src="empty_heart.png"
+    />
+  </div>
+</div>
+`;
