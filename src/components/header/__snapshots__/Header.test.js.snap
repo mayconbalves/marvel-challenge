@@ -22,9 +22,7 @@ exports[`<Header /> should render correct name of StyledInput 1`] = `
   >
     <input
       class="sc-bdfBwQ hFmnHx"
-      name="hero"
       placeholder="Procure seu herói"
-      type="text"
       value=""
       width="80%"
     />

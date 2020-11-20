@@ -29,9 +29,7 @@ exports[`<CharacterDetails /> should render link logo 1`] = `
       >
         <input
           class="sc-gsTCUz jhNQGZ"
-          name="hero"
           placeholder="Procure seu herói"
-          type="text"
           value=""
           width="80%"
         />
@@ -119,9 +117,7 @@ exports[`<CharacterDetails /> should render logo image 1`] = `
       >
         <input
           class="sc-gsTCUz jhNQGZ"
-          name="hero"
           placeholder="Procure seu herói"
-          type="text"
           value=""
           width="80%"
         />
@@ -209,9 +205,7 @@ exports[`<CharacterDetails /> should render title when have comics 1`] = `
       >
         <input
           class="sc-gsTCUz jhNQGZ"
-          name="hero"
           placeholder="Procure seu herói"
-          type="text"
           value=""
           width="80%"
         />
@@ -299,9 +293,7 @@ exports[`<CharacterDetails /> should render title without comics 1`] = `
       >
         <input
           class="sc-gsTCUz jhNQGZ"
-          name="hero"
           placeholder="Procure seu herói"
-          type="text"
           value=""
           width="80%"
         />

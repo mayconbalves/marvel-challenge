@@ -27,9 +27,9 @@ const Input = (
 
 Input.propTypes = {
   onKeyDown: func,
-  onChange: func.isRequired,
+  onChange: func,
   placeholder: string,
-  value: string.isRequired,
+  value: string,
   width: string,
   type: string,
   name: string
