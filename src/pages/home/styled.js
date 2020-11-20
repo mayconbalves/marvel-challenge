@@ -44,45 +44,11 @@ export const Content = styled.div`
   margin: 25px 0;
 `
 
-export const Card = styled.div`
-  cursor: pointer;
-  display: grid;
-  height: 240px;
-  width: 100%;
-  text-align: center;
-  transition: transform 0.7s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-`
-
 export const OnlyCard = styled.div`
   cursor: pointer;
   display: grid;
   height: 240px;
   width: 200px;
   text-align: center;
-  transition: transform 0.7s;
   margin: 0 auto;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-`
-
-export const CardImg = styled.img`
-  height: 200px;
-  width: 100%;
-  border-bottom: 7px solid red;
-`
-
-export const CardInfo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  img {
-    height: 20px;
-  }
 `

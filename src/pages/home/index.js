@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { fetchCharacters, getCharacter } from './actions'
 import { addFavoriteCharacters, desfavorCharacters } from 'actions/favorite'
 import logo from 'assets/logo.png'
 import heroImg from 'assets/superhero.png'
-import emptyHeart from 'assets/empty_heart.png'
-import heart from 'assets/heart.png'
 import Container from 'components/container'
 import InputStyled from 'components/input'
+import Card from 'components/card'
 import {
   LogoContainer,
   StyledDiv,
@@ -17,9 +15,6 @@ import {
   HeroDiv,
   OrderHero,
   Content,
-  Card,
-  CardImg,
-  CardInfo,
   Grid,
   OnlyCard
 } from './styled'
@@ -68,8 +63,6 @@ const Home = () => {
     }
   }
 
-  const hasId = likes.map(item => item.id)
-  const isFavorite = likes.map(item => item.like)
   return (
     <Container color='#fff'>
       <Grid>
@@ -110,60 +103,26 @@ const Home = () => {
         <Content>
           {
             allCharacters.length > 1 ? allCharacters.map(character => {
-              const filtered = likes.filter(like => like.id === character.id)
               return (
-                <Card  key={character.id}>
-                  <Link to={`/characters/${character.id}`}>
-                    <CardImg
-                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                      alt={character.name}
-                    />
-                  </Link>
-                  <CardInfo>
-                    <p>{character.name}</p>
-                    {
-                      !hasId.includes(character.id) &&
-                      isFavorite.includes(true)
-                      ? <img
-                          src={emptyHeart}
-                          alt='favorito'
-                          onClick={() => handleFavorite(filtered.id, true)}
-                        />
-                      : <img
-                          src={heart}
-                          alt='favorito'
-                          onClick={() => handleDesfavor(filtered.id, false)}
-                        />
-                    }
-                  </CardInfo>
-                </Card>
+                <Card
+                  key={character.id}
+                  character={character}
+                  likes={likes}
+                  allCharacters={allCharacters}
+                  handleFavorite={handleFavorite}
+                  handleDesfavor={handleDesfavor}
+                />
               )
             }) : allCharacters.map(character => {
-              const filtered = likes.filter(like => like.id === character.id)
               return (
                 <OnlyCard  key={character.id}>
-                  <Link to={`/characters/${character.id}`}>
-                    <CardImg
-                      src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                      alt={character.name}
-                    />
-                  </Link>
-                  <CardInfo>
-                    <p>{character.name}</p>
-                    {
-                      !hasId.includes(character.id)
-                      ? <img
-                          src={emptyHeart}
-                          alt='favorito'
-                          onClick={() => handleFavorite(filtered.id, true)}
-                        />
-                      : <img
-                          src={heart}
-                          alt='favorito'
-                          onClick={() => handleDesfavor(filtered.id, false)}
-                        />
-                    }
-                  </CardInfo>
+                  <Card
+                    character={character}
+                    likes={likes}
+                    allCharacters={allCharacters}
+                    handleFavorite={handleFavorite}
+                    handleDesfavor={handleDesfavor}
+                  />
                 </OnlyCard>
               )
             })
