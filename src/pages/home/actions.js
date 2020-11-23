@@ -22,6 +22,22 @@ export const fetchCharacters = () => async dispatch => {
       .catch(error => dispatch(fetchCharactersError(error)))
 }
 
+export const fetchCharactersByOrderName = () => async dispatch => {
+	const response = await fetch(API_URL.CHARACTERS_LIST_BY_ORDER_NAME)
+    response
+      .json()
+      .then(response => dispatch(fetchCharactersSuccess(response.data)))
+      .catch(error => dispatch(fetchCharactersError(error)))
+}
+
+export const fetchCharactersByOrderNameDesc = () => async dispatch => {
+	const response = await fetch(API_URL.CHARACTERS_LIST_BY_ORDER_NAME_DESC)
+    response
+      .json()
+      .then(response => dispatch(fetchCharactersSuccess(response.data)))
+      .catch(error => dispatch(fetchCharactersError(error)))
+}
+
 const getCharacterSuccess = data => ({
 	type: GET_CHARACTERS_SUCCESS,
 	payload: data

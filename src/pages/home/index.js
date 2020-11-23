@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchCharacters, getCharacter } from './actions'
+import {
+  fetchCharacters,
+  getCharacter,
+  fetchCharactersByOrderName,
+  fetchCharactersByOrderNameDesc
+} from './actions'
 import { addFavoriteCharacters, desfavorCharacters } from 'actions/favorite'
 import logo from 'assets/logo.png'
 import heroImg from 'assets/superhero.png'
@@ -16,12 +21,14 @@ import {
   OrderHero,
   Content,
   Grid,
-  OnlyCard
+  OnlyCard,
+  OrderButton
 } from './styled'
 
 const Home = () => {
   const [values, setValues] = useState({ hero: '' })
   const [likes, setLikes] = useState([])
+  const [orderBy, setOrder] = useState(true)
   const dispatch = useDispatch()
   const allCharacters = useSelector(state => state.charactersReducer.characters) || []
 
@@ -51,6 +58,16 @@ const Home = () => {
   const handleDesfavor = (id, like) => {
     dispatch(desfavorCharacters(id, like))
     getFavorite()
+  }
+
+  const handleOrderByName = () => {
+    dispatch(fetchCharactersByOrderName())
+    setOrder(false)
+  }
+
+  const handleOrderByNameDesc = () => {
+    dispatch(fetchCharactersByOrderNameDesc())
+    setOrder(true)
   }
 
   const handleKeyDown = async (e) => {
@@ -96,7 +113,11 @@ const Home = () => {
             </div>
             <OrderHero>
               <img src={heroImg} alt='super herói' />
-              <p>Ordernar por nome A/Z</p>
+              {
+                orderBy
+                ? <OrderButton onClick={handleOrderByName}>Ordernar por nome A/Z</OrderButton>
+                : <OrderButton onClick={handleOrderByNameDesc}>Ordernar por nome Z/A</OrderButton>
+              }
             </OrderHero>
           </HeroDiv>
         </StyledDiv>

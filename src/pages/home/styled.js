@@ -52,3 +52,11 @@ export const OnlyCard = styled.div`
   text-align: center;
   margin: 0 auto;
 `
+
+export const OrderButton = styled.button`
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 0 10px;
+  cursor: pointer;
+`
