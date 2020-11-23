@@ -63,9 +63,11 @@ exports[`<Home /> should render correct title element 1`] = `
             alt="super herói"
             src="superhero.png"
           />
-          <p>
+          <button
+            class="sc-bqyKva iPXTAZ"
+          >
             Ordernar por nome A/Z
-          </p>
+          </button>
         </div>
       </div>
     </div>
